@@ -1,0 +1,13 @@
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
+export default defineConfig({
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        { src: 'data', dest: '' },       // copy data/ → dist/data/
+        { src: '*.html', dest: '' }      // copy all root html files → dist/
+      ]
+    })
+  ]
+})
